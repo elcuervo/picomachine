@@ -1,5 +1,5 @@
 {
-  "name": "PicoMachine",
+  "name": "picomachine",
   "description": "PicoMachine: javascript version of the ruby MicroMachine",
   "version": "0.0.1",
   "author": "elCuervo <elcuervo@elcuervo.co>",
