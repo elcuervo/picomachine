@@ -37,6 +37,12 @@ scenario('PicoMachine - test states', {
     g.assert_equal(counter, 0);
     this.stateMachine.trigger('confirm');
     g.assert_equal(counter, 1);
+  },
+
+  'throw error on invalid state': function(g) {
+    g.assert_throw(Error, function() {
+      this.stateMachine.trigger('fruit');
+    });
   }
 
 });
