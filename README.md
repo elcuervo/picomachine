@@ -26,6 +26,8 @@ machine.trigger('ignore');   // true
 ## Callbacks
 
 ```javascript
+machine.trigger('reset');
+
 // Callback for the 'confirm' event
 machine.on('confirmed', function() {
   console.log('The thing is confirmed');
@@ -33,6 +35,10 @@ machine.on('confirmed', function() {
 
 // Callback for all the things!
 machine.on('any', function() {
-  console.log('I'm triggered in allllll the events!!!');
+  console.log("I'm triggered in allllll the events!!!");
 });
+
+machine.trigger('confirm');
+// The thing is confirmed
+// I'm triggered in allllll the events!!!
 ```
