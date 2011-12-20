@@ -22,3 +22,17 @@ machine.trigger('ignore');   // false
 machine.trigger('reset');    // true
 machine.trigger('ignore');   // true
 ```
+
+## Callbacks
+
+```javascript
+// Callback for the 'confirm' event
+machine.on('confirmed', function() {
+  console.log('The thing is confirmed');
+});
+
+// Callback for all the things!
+machine.on('any', function() {
+  console.log('I'm triggered in allllll the events!!!');
+});
+```
