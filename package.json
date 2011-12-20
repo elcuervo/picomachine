@@ -1,0 +1,15 @@
+{
+  "name": "PicoMachine",
+  "description": "PicoMachine: javascript version of the ruby MicroMachine",
+  "version": "0.0.1",
+  "author": "elCuervo <elcuervo@elcuervo.co>",
+  "keywords": ["statemachine"],
+  "directories": {"lib": "./lib", "test": "./test"},
+  "repositories": [
+    {
+      "type": "git",
+      "url": "git://github.com/elcuervo/picomachine.git"
+    }
+  ],
+  "main": "./lib/picomachine.js"
+}
