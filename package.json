@@ -1,9 +1,9 @@
 {
   "name": "picomachine",
-  "description": "PicoMachine: javascript version of the ruby MicroMachine",
+  "description": "PicoMachine: minimal finite state machine",
   "version": "0.0.1",
   "author": "elCuervo <elcuervo@elcuervo.co>",
-  "keywords": ["statemachine"],
+  "keywords": ["statemachine", "fsm"],
   "directories": {"lib": "./lib", "test": "./test"},
   "repositories": [
     {
