@@ -11,7 +11,7 @@ To be a minimal and fully functional minimal state machine.
 ```javascript
 var PicoMachine = require('picomachine');
 
-var machine = PicoMachine.new('new'); // Initial state.
+var machine = new PicoMachine('new'); // Initial state.
 
 machine.transitionsFor['confirm'] = { new: 'confirmed' };
 machine.transitionsFor['ignore']  = { new: 'ignored' };
