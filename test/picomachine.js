@@ -11,10 +11,10 @@ scenario('PicoMachine - test states', {
   },
 
   'switch to valid states': function(g) {
-    g.assert_equal(this.stateMachine.trigger('confirm'), true);
-    g.assert_equal(this.stateMachine.state, 'confirmed');
-    g.assert_equal(this.stateMachine.trigger('ignore'), false);
-    g.assert_equal(this.stateMachine.state, 'confirmed');
+    g.assertEqual(this.stateMachine.trigger('confirm'), true);
+    g.assertEqual(this.stateMachine.state, 'confirmed');
+    g.assertEqual(this.stateMachine.trigger('ignore'), false);
+    g.assertEqual(this.stateMachine.state, 'confirmed');
   },
 
   'call the any callback switching a state': function(g) {
@@ -26,7 +26,7 @@ scenario('PicoMachine - test states', {
     this.stateMachine.on('confirmed', counterUp);
 
     this.stateMachine.trigger('confirm');
-    g.assert_equal(counter, 2);
+    g.assertEqual(counter, 2);
   },
 
   'call the propper callbacks': function(g) {
@@ -34,13 +34,13 @@ scenario('PicoMachine - test states', {
     this.stateMachine.on('confirmed', function() {
       counter++;
     });
-    g.assert_equal(counter, 0);
+    g.assertEqual(counter, 0);
     this.stateMachine.trigger('confirm');
-    g.assert_equal(counter, 1);
+    g.assertEqual(counter, 1);
   },
 
   'throw error on invalid state': function(g) {
-    g.assert_throw(Error, function() {
+    g.assertThrow(Error, function() {
       this.stateMachine.trigger('fruit');
     });
   }
