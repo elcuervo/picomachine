@@ -41,4 +41,10 @@ machine.on('any', function() {
 machine.trigger('confirm');
 // The thing is confirmed
 // I'm triggered in allllll the events!!!
+
+machine.on('something', function() {
+  // Inside a callback 'this' represents the machine
+  // so you can trigger other events within it
+  this.trigger('otherThing');
+});
 ```
