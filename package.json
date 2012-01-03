@@ -1,7 +1,7 @@
 {
   "name": "picomachine",
   "description": "PicoMachine: minimal finite state machine",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "elCuervo <elcuervo@elcuervo.co>",
   "keywords": ["statemachine", "fsm"],
   "directories": {"lib": "./lib", "test": "./test"},
