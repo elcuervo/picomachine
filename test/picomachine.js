@@ -6,8 +6,9 @@ if(typeof module != 'undefined') {
 scenario('PicoMachine - test states', {
   'before': function() {
     this.stateMachine = new PicoMachine('new');
-    this.stateMachine.transitionsFor['confirm'] = { new: 'confirmed' };
-    this.stateMachine.transitionsFor['ignore'] = { new: 'ignored' };
+    this.stateMachine.transitionsFor['confirm'] = {new: 'confirmed'};
+    this.stateMachine.transitionsFor['abort'] = {confirmed: 'aborted'};
+    this.stateMachine.transitionsFor['ignore'] = {new: 'ignored'};
   },
 
   'switch to valid states': function(g) {
@@ -43,6 +44,15 @@ scenario('PicoMachine - test states', {
     g.assertThrow(Error, function() {
       this.stateMachine.trigger('fruit');
     });
+  },
+
+  'switch states inside a callback': function(g) {
+    this.stateMachine.on('confirmed', function() {
+      g.assert(this.trigger('abort'));
+    });
+    this.stateMachine.trigger('confirm');
+
+    g.assertEqual(this.stateMachine.state, 'aborted');
   }
 
 });
