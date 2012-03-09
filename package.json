@@ -12,7 +12,7 @@
     }
   ],
   "main": "./lib/picomachine.js",
-  "devDependecies": { "gerbil": "*" },
+  "devDependencies": { "gerbil": "*" },
   "scripts": {
     "test": "node test/picomachine.js"
   }
