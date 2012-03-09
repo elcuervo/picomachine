@@ -1,6 +1,8 @@
 # PicoMachine
 _a.k.a.: [MicroMachine](https://github.com/soveran/micromachine) for javascript_
 
+[![Build Status](https://secure.travis-ci.org/elcuervo/picomachine.png?branch=master)](http://travis-ci.org/elcuervo/picomachine)
+
 ## Description
 
 PicoMachine is a javascript version of [MicroMachine](https://github.com/soveran/micromachine) and have the same goals.
