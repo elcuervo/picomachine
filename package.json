@@ -11,5 +11,9 @@
       "url": "git://github.com/elcuervo/picomachine.git"
     }
   ],
-  "main": "./lib/picomachine.js"
+  "main": "./lib/picomachine.js",
+  "devDependecies": { "gerbil": "*" },
+  "scripts": {
+    "test": "node test/picomachine.js"
+  }
 }
